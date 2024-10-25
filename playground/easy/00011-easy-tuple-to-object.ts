@@ -20,7 +20,8 @@
 
 /* _____________ Your Code Here _____________ */
 
-type TupleToObject<T extends readonly (string | number | symbol)[]> = { [P in T[number]]: P};
+type TupleToObject<T extends readonly PropertyKey[]> = { [K in T[number]]: K};
+
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils'
